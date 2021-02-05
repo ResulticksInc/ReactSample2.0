@@ -22,110 +22,6 @@ export default class App extends BaseComponent {
 				console.log(`\n\n **** FCM Token **** \n ${fcmToken} \n **** End \n\n`);
 			}
 		});
-		/* Resulticks Push Handler */
-		if (Platform.OS == 'ios') {
-			this.resIosNotificationHandler();
-		} else {
-			this.resAndroidNotificationHandler();
-		}
-	}
-
-	componentWillUnmount() {
-		this.removeNotificationDisplayedListener();
-		this.removeNotificationListener();
-	}
-
-	/* Resulticks Ios Notification Handler */
-	resIosNotificationHandler() {
-		// Foreground notification - iOS
-		firebase.notifications().onNotification((obj) => {
-			if (obj) {
-				obj.actionIdentifier = obj.action;
-				var resPayload = this.payloadConversion(obj);
-				if (resPayload) {
-					NativeModules.ReReactNativeSDK.onNotificationPayloadReceiver(JSON.stringify(resPayload), 1);
-				}
-
-				// Local Notification optional one
-				const local_notification = new firebase.notifications.Notification()
-					.setBody(resPayload._body)
-					.setData(resPayload._data)
-					.setNotificationId(resPayload._notificationId)
-					.setTitle(resPayload._title);
-				firebase.notifications().displayNotification(local_notification);
-				// Do your functionality
-
-				/*******/
-			}
-		});
-
-		// Notification Open - iOS
-		firebase.notifications().onNotificationOpened((obj) => {
-			if (obj) {
-				var notificationObject = obj.notification;
-				notificationObject.actionIdentifier = obj.action;
-				var resPayload = this.payloadConversion(notificationObject);
-				if (resPayload) {
-					NativeModules.ReReactNativeSDK.onNotificationPayloadReceiver(JSON.stringify(resPayload), 2);
-				}
-				console.log('Payload Receiver Opened' + resPayload);
-				// Do your functionality
-				let customParam = JSON.parse(resPayload._data.customParams);
-				this.props.navigation.navigate(customParam.screenName);
-				/*******/
-			}
-		});
-
-		// Notification received when app open for the first time or from closed state - iOS
-
-			firebase.notifications().getInitialNotification().then((obj) => {
-				//
-
-				if (obj) {
-					console.log("Inside Receive Notification");
-
-					var notificationObject = obj.notification;
-					notificationObject.actionIdentifier = obj.action;
-					var resPayload = this.payloadConversion(notificationObject);
-					if (resPayload) {
-						NativeModules.ReReactNativeSDK.onNotificationPayloadReceiver(JSON.stringify(resPayload), 3);
-					}
-					console.log('App first time Opened' + resPayload);
-				// Do your functionality
-				let customParam = JSON.parse(resPayload._data.customParams);
-				this.props.navigation.navigate(customParam.screenName);
-				}
-
-				/*******/
-			});
-
-
-	}
-
-	/* Resulticks Android Notification Handler */
-	resAndroidNotificationHandler() {
-		if (Platform.OS != 'ios') {
-			DeviceEventEmitter.addListener('resulticksNotification', (payload) => {
-				let customParam = JSON.parse(payload.customParams);
-				this.props.navigation.navigate(customParam.screenName);
-			});
-		}
-	}
-
-	/* Notification payload conversion */
-	payloadConversion(notfication) {
-		var cache = [];
-		var payload = JSON.stringify(notfication, function(key, value) {
-			if (typeof value === 'object' && value !== null) {
-				if (cache.indexOf(value) !== -1) {
-					return;
-				}
-				cache.push(value);
-			}
-			return value;
-		});
-		cache = null;
-		return JSON.parse(payload);
 	}
 
 	/* User Register */
@@ -144,11 +40,6 @@ export default class App extends BaseComponent {
 		console.log('Register App.js' + JSON.stringify(resUser));
 
 		NativeModules.ReReactNativeSDK.userRegister(JSON.stringify(resUser));
-
-		// NativeModules.ReReactNativeSDK.getNotification().then(value => {
-		// 	alert(value);
-		// })
-
 
 	};
 
@@ -189,20 +80,14 @@ export default class App extends BaseComponent {
 		NativeModules.ReReactNativeSDK.locationUpdate(JSON.stringify(location1));
 	};
 
-	// Get notification list: Developer need to call this method to get notification list.
+	// Refer Notification Related things in Notification.js file.
 	getNotification = () => {
 		this.props.navigation.navigate('Notification');
 	}
 
-	// Delete notification: Developer must pass selected notification object to delete
-	deleteNotification = (position) => {
-		let noteObj = { campaignId: '0001' };
-		NativeModules.ReReactNativeSDK.deleteNotification(JSON.stringify(noteObj));
-	};
-
+	// Custom Conversation 
 	appConversation = (position) => {
-		//please replace withyour app id
-		NativeModules.ReReactNativeSDK.appConversionTracking(JSON.stringify(noteObj));
+		NativeModules.ReReactNativeSDK.appConversionTracking();
 	};
 
 	
@@ -234,11 +119,6 @@ export default class App extends BaseComponent {
 				<View style={{marginTop:10,width:"100%",height:40,margin:10}}>
 					<Button style={styles.Button} onPress={this.appConversation} title="Custom / App Conversation" color="#FF6347" />
 				</View>
-				
-				
-				
-				
-				
 			</View>
 		);
 	}

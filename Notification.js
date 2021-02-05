@@ -9,7 +9,7 @@ export default class Notification extends BaseComponent {
 			notificationList:[]
 		  }
 	}
-
+	//Get Notification list
 	getNotification=() =>{
 		NativeModules.ReReactNativeSDK.getNotification((notifications) => {
 			let notificationList = [];
@@ -26,44 +26,48 @@ export default class Notification extends BaseComponent {
               if (notificationList.length !== 0) {
                 // Do your functionality
                 this.setState({notificationList:notificationList});
-                //alert(JSON.stringify(notificationList));
+                
               }
 		})
 	}
+	// Delete notification by selected Notification Object
 	notificationDeleteByObj=() =>{
-		//your selected notification
+		
 		let noteObj = this.state.notificationList[0];
 		NativeModules.ReReactNativeSDK.deleteNotificationByObject(JSON.stringify(obj));
 	}
+	// Delete notification by selected Notification CampaignId
 	notificationDeleteByCampaignId=() => {
 		var campaignId = notificationList[0].campaignId
 	    var obj = JSON.stringify({ campaignId: campaignId })
 	    NativeModules.ReReactNativeSDK.deleteNotificationByCampaignId(obj);
 
 	}
+	// Delete notification by selected Notification NotificationId
 	deleteNotificationByNotificationId = position => {
 	    var notificationId = notificationList[0].notificationId
 	    var obj = JSON.stringify({ notificationId: notificatioinId })
 	    NativeModules.ReReactNativeSDK.deleteNotificationByNotificationId(obj);
 	};
-	
+	// Get total unraed notification count
 	getUnreadCount() {
 		NativeModules.ReReactNativeSDK.getUnReadNotificationCount((count) => {
 		})
 	}
+	// Get total raed notification count
 	getReadCount() {
 		NativeModules.ReReactNativeSDK.getReadNotificationCount ((count) => {
 	
 		})
   
 	}
-
+	// Change Unread Notification to ReadNotification
 	readNotification = () => {
 		var notificationId = notificationList[0].notificationId
 		NativeModules.ReReactNativeSDK.readNotification (notificationId,(count) => {
 		})
 	}
-
+	// Change Read Notification to Unread Notification
 	unReadNotification = () => {
 		var notificationId = notificationList[0].notificationId
 		NativeModules.ReReactNativeSDK.unReadNotification (notificationId,(count) => {
