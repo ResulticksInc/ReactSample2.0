@@ -1,0 +1,59 @@
+{
+    "carouselNotification": [
+        {
+            "to": "cM9ZAxPgS_A:APA91bEpiiHJT84xeituvwGilgE80hGXWdBoc0X5BalfwBueP_5xJDgqE8IL_dHO0i0ukOCkx7E7utluKWYjrNgEzG2ufKquo6OXU3fm0TPrUvxCw9AtEaZCwOSDmPYgUpUBuA7do_hN",
+            "data": {
+                "customParams": "[]",
+                "id": "831d8188-785f-4195-b645-12403d17f909_7f6f1305-1482-4ce7-b6ad-74a50f52451r",
+                "category": "-- Select --",
+                "body": "Hi this is Blast API check from Team Env. https:\/\/lco.resul.team\/VEB2KQ7EES",
+                "channelId": "1",
+                "ttl": "",
+                "mobileFriendlyUrl": "https:\/\/www.google.com?did=cust_c4363a53_4d19_4eb9_b83e_d3ba1f1f9f1e&bid=E&cid=7f6f1305-1482-4ce7-b6ad-74a50f52451f&rid=KQ7E&sid=299df701-d2d8-442c-ab59-2b23b3d09698&chl=sm&utm_source=RE&utm_medium=comm&utm_campaign=4TP",
+                "sourceType": "1",
+                "url": "http:\/\/commondatastorage.googleapis.com\/gtv-videos-bucket\/sample\/SubaruOutbackOnStreetAndDirt.mp4",
+                "channelName": "Credit card",
+                "title": "AB API check from Team",
+                "titleColor": "#098123",
+                "bodyColor": "#098123",
+                "contentBgColor": "#123123",
+                "tag": "#Diwailoffer",
+                "carousel": [
+                    {
+                        "body": "body 1",
+                        "customActions": "[\n  {\n    \"actionBgColor\" : \"#FFFFFF\",\n    \"actionTextColor\" : \"#000000\",\n    \"actionName\" : \"Maybe Later 1\",\n    \"duration\" : \"5 Minute(s)\",\n    \"bu\" : \"1\",\n    \"actionType\" : \"maybelater\",\n    \"actionId\" : 4\n  },\n  {\n    \"url\" : \"https:\\/\\/static.toiimg.com\\/photo\\/72975551.cms\",\n    \"actionTextColor\" : \"#000000\",\n    \"bu\" : \"1\",\n    \"duration\" : \"1 Minute(s)\",\n    \"actionName\" : \"Dismiss 1\",\n    \"actionId\" : 5,\n    \"actionBgColor\" : \"#FFFFFF\",\n    \"actionType\" : \"dismiss\"\n  }\n]",
+                        "sourceType": "2",
+                        "title": "title 1",
+                        "url": "http:\/\/commondatastorage.googleapis.com\/gtv-videos-bucket\/sample\/SubaruOutbackOnStreetAndDirt.mp4"
+                    },
+                    {
+                        "body": "body 2",
+                        "customActions": "[\n  {\n    \"actionBgColor\" : \"#FFFFFF\",\n    \"actionTextColor\" : \"#000000\",\n    \"actionName\" : \"Maybe Later 2\",\n    \"duration\" : \"5 Minute(s)\",\n    \"bu\" : \"1\",\n    \"actionType\" : \"maybelater\",\n    \"actionId\" : 4\n  },\n  {\n    \"url\" : \"https:\\/\\/static.toiimg.com\\/photo\\/72975551.cms\",\n    \"actionTextColor\" : \"#000000\",\n    \"bu\" : \"1\",\n    \"duration\" : \"1 Minute(s)\",\n    \"actionName\" : \"Dismiss 2\",\n    \"actionId\" : 5,\n    \"actionBgColor\" : \"#FFFFFF\",\n    \"actionType\" : \"dismiss\"\n  }\n]",
+                        "sourceType": "2",
+                        "title": "title 2",
+                        "url": "http:\/\/commondatastorage.googleapis.com\/gtv-videos-bucket\/sample\/ElephantsDream.mp4"
+                    },
+                    {
+                        "body": "body 3",
+                        "customActions": "[\n  {\n    \"actionBgColor\" : \"#FFFFFF\",\n    \"actionTextColor\" : \"#000000\",\n    \"actionName\" : \"Maybe Later 3\",\n    \"duration\" : \"5 Minute(s)\",\n    \"bu\" : \"1\",\n    \"actionType\" : \"maybelater\",\n    \"actionId\" : 4\n  },\n  {\n    \"url\" : \"https:\\/\\/static.toiimg.com\\/photo\\/72975551.cms\",\n    \"actionTextColor\" : \"#000000\",\n    \"bu\" : \"1\",\n    \"duration\" : \"1 Minute(s)\",\n    \"actionName\" : \"Dismiss 3\",\n    \"actionId\" : 5,\n    \"actionBgColor\" : \"#FFFFFF\",\n    \"actionType\" : \"dismiss\"\n  }\n]",
+                        "sourceType": "2",
+                        "title": "title 3",
+                        "url": "http:\/\/commondatastorage.googleapis.com\/gtv-videos-bucket\/sample\/ForBiggerBlazes.mp4"
+                    },
+                    {
+                        "body": "body 4",
+                        "customActions": "[\n  {\n    \"actionBgColor\" : \"#FFFFFF\",\n    \"actionTextColor\" : \"#000000\",\n    \"actionName\" : \"Maybe Later 4\",\n    \"duration\" : \"5 Minute(s)\",\n    \"bu\" : \"1\",\n    \"actionType\" : \"maybelater\",\n    \"actionId\" : 4\n  },\n  {\n    \"url\" : \"https:\\/\\/static.toiimg.com\\/photo\\/72975551.cms\",\n    \"actionTextColor\" : \"#000000\",\n    \"bu\" : \"1\",\n    \"duration\" : \"1 Minute(s)\",\n    \"actionName\" : \"Dismiss 4\",\n    \"actionId\" : 5,\n    \"actionBgColor\" : \"#FFFFFF\",\n    \"actionType\" : \"dismiss\"\n  }\n]",
+                        "sourceType": "2",
+                        "title": "title 4",
+                        "url": "http:\/\/commondatastorage.googleapis.com\/gtv-videos-bucket\/sample\/TearsOfSteel.mp4"
+                    }
+                ],
+                "bannerStyle": null,
+                "actionName": "",
+                "navigationScreen": "com.visionbank.view.activity.HomeOffersActivity",
+                "isCarousel": "true",
+                "pushType": "2"
+            }
+        }
+    ]
+}

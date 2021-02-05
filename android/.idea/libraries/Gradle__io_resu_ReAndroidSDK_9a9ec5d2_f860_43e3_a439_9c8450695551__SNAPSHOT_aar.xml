@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.resu:ReAndroidSDK_9a9ec5d2_f860_43e3_a439_9c8450695551:-SNAPSHOT@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4721b0fff539093340db07eecba70009/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4721b0fff539093340db07eecba70009/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4721b0fff539093340db07eecba70009/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

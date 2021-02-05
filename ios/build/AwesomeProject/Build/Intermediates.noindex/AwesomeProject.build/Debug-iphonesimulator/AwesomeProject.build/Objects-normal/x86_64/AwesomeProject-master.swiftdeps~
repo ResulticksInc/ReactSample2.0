@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+options: "61af4b9c719d0730f8b6dfc3a8e81416"
+build_time: [1581670390, 469142000]
+inputs:
+  "/Users/rajaram/Documents/Github/GGG Github/ReactSample/ios/Test.swift": [1574767211, 364901900]
